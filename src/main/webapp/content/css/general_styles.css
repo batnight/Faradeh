@@ -1,0 +1,392 @@
+html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5B5B5B;
+}
+
+.main-container {
+    background-color: #5B5B5B;
+    padding: 0px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin: 0px;
+}
+
+.side-bar {
+    background-color:#191919;
+    height:100%;
+    position:fixed;
+    display:block;
+    z-index:1040;
+    right:0;
+}
+
+.material-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+    right:inherit;
+    width:inherit;
+}
+
+button.btn-flat {
+    color:#E57373;
+}
+
+header {
+    background-color: #FFFFFF;
+	margin-right: -15px;
+    margin-left: -15px;
+    box-shadow: 0px 2px 5px grey;
+}
+
+.modal.bottom-sheet {
+    right:auto;
+    width:inherit;
+}
+
+.nopadding {
+    padding:0px;
+}
+
+.float-left {
+    float:left;
+}
+
+.float-right {
+    float:right;
+}
+
+.height-100-percent {
+    height:100%;
+}
+
+.width-100-percent {
+    width:100%;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.pink-background, .pink-background:hover {
+    background-color: #E57373;
+}
+
+.indented {
+    padding-right: 10%;
+}
+
+.bottom-border {
+    border-bottom: 2px solid #88A0A8;
+}
+
+.vertically-aligning-container {
+    height:100%;
+    padding: 10px 10px;
+    
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.container-fluid {
+    padding:0px;
+}
+
+.row {
+    margin-left: 0.0%;
+    margin-right: 0.0%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+}
+nav 
+{    background-color: #88A0A8;
+    padding-right:50px;
+}
+
+nav .select-wrapper span.caret {
+    color:#EFEFEF;
+}
+
+nav.navbar-fixed-bottom {
+    height:auto;
+}
+
+.desk, .student-card {
+    margin:0px;
+    background-color: #5B5B5B;
+    max-width:100%;
+    height:auto;
+    overflow: hidden;
+}
+
+.desk .card-tab, .student-card .card-tab{
+    padding:5px;
+    height:auto;
+}
+
+.desk .desk-header {
+    background-color: #191919;
+    padding:20px;
+}
+
+.student-card .student-card-header {
+    height:100px;
+    background-color: #191919;
+    border-bottom: 2px solid #88A0A8;
+    padding:20px;
+}
+
+.desk .desk-header h5{
+    color: #FFFFFF;
+    margin:0;
+}
+
+.desk .tabs, .student-card .tabs {
+    background-color: #191919;
+    padding:0;
+}
+
+.card-tab .tabs {
+    background-color:#383838;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    text-decoration: none;
+}
+
+.tabs .tab a {
+    color: rgba(255,255,255,.5);
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #ffffff;
+}
+
+.tabs .indicator {
+    height: 3px;
+    background-color: #E57373;
+}
+
+.outline-box {
+    background-color: #383838;
+    height:auto;
+    margin:5px;
+    border-color: #88A0A8;
+    border-style: solid;
+    border-width: 0px;
+    padding:5px;
+    display:table;
+}
+
+span, p, h1, h2, h3, h4, h5, h6, table {
+    color: #EFEFEF;
+}
+
+a, a:hover{
+    color:#E57373;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+td {
+    text-align: right;
+    vertical-align:middle;
+    padding:2px;
+}
+
+th {
+    text-align: right;
+    font-size: 18px;
+}
+
+
+
+tr {
+    width:200px;
+}
+
+tr.hover-enabled {
+    width:100%;
+    margin:2px;
+    border: 2px solid rgba(255,255,255,0);
+}
+
+tr.hover-enabled:hover {
+    border: 2px dashed rgba(255,255,255,0.7) !important;
+}
+
+tr.btn-flat {
+    width:100%;
+    height:auto;
+}
+
+td p, td span {
+    font-size: 18px;
+}
+
+
+
+td .table-text {
+    color: #EFEFEF;
+    width: auto; 
+    margin-left: 10px;
+    float: right; /* [1] */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-text span {
+    margin-left: 5px;
+}
+
+.table-link {
+    color: #E57373;
+}
+
+td .input-field {
+    margin-top: 0px;
+    width:100%;
+}
+
+td.drop-down {
+    width:50%;
+}
+
+.input-field span {
+    text-align:right;
+}
+
+.input-field ul {
+    width:100% !important;
+}
+
+
+
+.input-field.col .dropdown-content [type="checkbox"]+label {
+    left:15px;
+}
+
+.dropdown-content {
+    padding-right: 0px;
+}
+
+.select-wrapper span.caret {
+    right: auto;
+    left:0;
+    border-top: 0px;
+    color: #E57373;
+    font-size: 16px;
+}
+
+.navbar-fixed-bottom {
+    background-color: #88A0A8;
+}
+
+#bottom-nav .input-field:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.select-dropdown{
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #efefef;
+}
+
+.input-field input[type=search] {
+    padding-right:4rem;
+}
+
+.person-photo-circular-frame {
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.employee-photo-frame {
+    width:100px;
+    height:100px;
+    border-radius: 10%;
+    background-size: cover;
+    margin:auto;
+}
+
+.course-thumb {
+    padding:10px;
+    margin:10px;
+    background-color: #000300;
+    width:140px;
+    height:100px;
+    overflow:hidden;
+    float:right;
+}
+
+.collapsible {
+    background-color: #383838;
+    border-top: 1px solid #303030;
+    border-right: 1px solid #303030;
+    border-left: 1px solid #303030;
+    margin: .5rem 0 1rem 0;
+    padding-right: 0;
+}
+
+.collapsible-body {
+    border-bottom: 1px solid #303030;
+    overflow:inherit;
+}
+
+.collapsible-header {
+    display: block;
+    cursor: pointer;
+    min-height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    background-color: #333333;
+    border-bottom: 1px solid #303030;
+    color:white;
+}
+
+.card-column-padding {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+    right: -99999px;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    right: -99999px;
+}
+
+.input-field label {
+    left:auto;
+    right:auto;
+}
+
+.input-field {
+    color:white;
+}
+
+[type="checkbox"]:checked+label:before {
+    border-right: 2px solid #E57373;
+    border-bottom: 2px solid #E57373;
+}

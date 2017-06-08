@@ -1,0 +1,89 @@
+.form-section {
+    width:60%;
+    margin: auto;
+}
+
+.form-section h1 {
+    color:#190000;
+}
+
+.form-seperator {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #190000;
+}
+
+.pink-background {
+    background-color: #E57373;
+}
+
+.brown-background {
+    background-color: #190000;
+    color:#999999;
+}
+
+.rounded-corners {
+    border-radius: 15px;
+}
+
+.bigger-button {
+    min-width: 200px;
+}
+
+.centered {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display:block;
+}
+
+.upload-image-box {
+    min-height: 200px;
+    border: 2px dashed #BDBDBD;
+}
+
+.upload-image-box button {
+    position:absolute;
+    margin-right: -35px;
+    bottom:15%;
+    right:50%;
+}
+
+
+.phone-div {
+    width:300px;
+    height: 627px;
+    position: relative;
+}
+
+.contain-image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.phone-screen {
+    width:89%;
+    height: 78%;
+    position: absolute;
+    right: 5%;
+    top: 11%;
+    padding:2%;
+}
+
+.phone-screen .company-logo {
+    width: 100px;
+    height:auto;
+    margin-top: 20px;
+}
+
+.phone-screen h3 {
+    font-size: 14px;
+}
+
+.phone-screen p {
+    font-size: 10px;
+}
