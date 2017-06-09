@@ -29,6 +29,12 @@ public class RoleBusiness {
         roleDao = new RoleDao(RoleEntity.class);
     }
 
+    public RoleEntity getById(String id) {
+        HashMap<String, Object> param = new HashMap<>();
+        param.put("_id", new ObjectId(id));
+        return roleDao.find(param);
+    }
+
     public RoleEntity getByName(RoleEntity entity) {
         HashMap<String, Object> param = new HashMap<>();
         if (entity.getRoleNameFa() != null) {

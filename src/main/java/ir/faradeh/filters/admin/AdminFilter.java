@@ -160,7 +160,7 @@ public class AdminFilter implements Filter {
         try {
             AdminEntity entity = (AdminEntity) session.getAttribute("user");
             if (entity == null) {
-                wrappedRequest.getRequestDispatcher("/privates/login-admin.html").forward(request, response);
+                wrappedResponse.sendRedirect("/Faradeh/privates/login-admin.html");
             } else {
                 chain.doFilter(wrappedRequest, wrappedResponse);
             }

@@ -40,16 +40,16 @@ public class PersonBusiness {
         accountDao = new AccountDao(AccountEntity.class);
     }
 
-    public AccountEntity selectAccountByUsernameAndPassword(AccountEntity ae) {
+    public AccountEntity selectAccountByUsernameAndPassword(String username, String password) {
         HashMap<String, Object> param = new HashMap<>();
-        param.put("Username", ae.getUsername());
-        param.put("Password", ae.getPassword());
+        param.put("Username", username);
+        param.put("Password", password);
         return accountDao.find(param);
     }
 
-    public AccountEntity selectAccountByUsername(AccountEntity ae) {
+    public AccountEntity selectAccountByUsername(String username) {
         HashMap<String, Object> param = new HashMap<>();
-        param.put("Username", ae.getUsername());
+        param.put("Username", username);
 
         return accountDao.find(param);
     }
@@ -60,6 +60,17 @@ public class PersonBusiness {
         } else {
             throw new FailedDeleteUserException();
         }
+    }
+
+    public List<PersonEntity> findAllPerson() {
+        return personDao.findList(null);
+    }
+
+    public PersonEntity getPersonById(String id) {
+        HashMap<String, Object> personsParam = new HashMap<>();
+        personsParam.put("_id", new ObjectId(id));
+
+        return personDao.find(personsParam);
     }
 
     public List<PersonEntity> findAllPersonByAccount(AccountEntity entity) {
@@ -77,7 +88,7 @@ public class PersonBusiness {
         InstitutionEntity institutionEntity = institutionBusiness.getByName(InstitutionName);
         RoleEntity roleEntity = roleBusiness.getByName(role);
 
-        account = selectAccountByUsername(accountEntity);
+        account = selectAccountByUsername(accountEntity.getUsername());
         if (account == null) {
             account = accountDao.insert(accountEntity);
         }
@@ -109,6 +120,21 @@ public class PersonBusiness {
         HashMap<String, Object> param = new HashMap<>();
         param.put("institution", institutionBusiness.getByName(institution));
         return personDao.findList(param);
+    }
+
+    public PersonEntity editPerson(String accountId, HashMap<String, Object> accountParam, String personId, HashMap<String, Object> personParam) throws FailedEditUserException {
+        PersonEntity personEntity;
+
+        if (accountDao.merge(new ObjectId(accountId), accountParam) != null) {
+
+            if ((personEntity = personDao.merge(new ObjectId(personId), personParam)) != null) {
+                return personEntity;
+            } else {
+                throw new FailedEditUserException();
+            }
+        } else {
+            throw new FailedEditUserException();
+        }
     }
 
     public PersonEntity editPerson(ObjectId personId, HashMap<String, Object> personParam) throws FailedEditUserException {

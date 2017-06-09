@@ -17,7 +17,7 @@ import org.mongodb.morphia.annotations.Reference;
  *
  * @author sorena
  */
-
+@Entity("person")
 public class PersonEntity {
 
     @Id

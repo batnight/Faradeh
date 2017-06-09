@@ -15,7 +15,7 @@ import org.mongodb.morphia.annotations.Property;
  *
  * @author sorena
  */
-
+@Entity("role")
 public class RoleEntity {
 
     @Id
