@@ -7,6 +7,7 @@ package ir.faradeh.utility;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ResourceBundle;
 import java.util.UUID;
 
 /**
@@ -14,10 +15,20 @@ import java.util.UUID;
  * @author sorena
  */
 public class UtilMethod {
-    public static int convertStringToInt(String text){
-        try{
+
+    public static String getExceptionMessages(String key) {
+        ResourceBundle bundle = ResourceBundle.getBundle("ExceptionMessages");
+        if (bundle.getString(key) != null) {
+            return bundle.getString(key);
+        } else {
+            return null;
+        }
+    }
+
+    public static int convertStringToInt(String text) {
+        try {
             return Integer.valueOf(text);
-        }catch(Exception e){
+        } catch (Exception e) {
             return 0;
         }
     }
