@@ -69,6 +69,6 @@
         </table>
         <a href="/Faradeh/privates/admin/dashboard.html">بازگشت به پنل</a>
         <br/>
-        <a href="/Faradeh/privates/admin/admin/addadmin.html">اضافه کردن ادمین جدید</a>
+        <a href="/Faradeh/privates/admin/addadmin.html">اضافه کردن ادمین جدید</a>
     </body>
 </html>

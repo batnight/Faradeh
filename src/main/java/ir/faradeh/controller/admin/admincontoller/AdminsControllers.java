@@ -63,23 +63,6 @@ public class AdminsControllers extends HttpServlet {
 
     }
 
-    @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        AdminEntity adminEntity = new AdminEntity();
-        HashMap<String, Object> param = new HashMap<>();
-        Map map = req.getParameterMap();
-        for (Object key : map.keySet()) {
-            if (!((String) key).equalsIgnoreCase("id")) {
-                param.put((String) key, req.getParameter((String) key));
-            }
-        }
-        String id = req.getParameter("Id");
-        try {
-            adminBusiness.editAdmin(id, param);
-        } catch (FailedEditUserException e) {
-            req.setAttribute("errorMessage", e.getMessage());
-            req.getRequestDispatcher("/err/error.jsp").forward(req, resp);
-        }
-    }
+    
 
 }

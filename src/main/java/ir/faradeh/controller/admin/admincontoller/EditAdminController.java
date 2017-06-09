@@ -38,7 +38,7 @@ public class EditAdminController extends HttpServlet {
         adminEntity = adminBusiness.getAdminById(id);
         request.setAttribute("entity", adminEntity);
 
-        request.getRequestDispatcher("/Faradeh/privates/admin/admin.jsp").forward(request, response);
+        request.getRequestDispatcher("/privates/admin/admin.jsp").forward(request, response);
 
     }
 
